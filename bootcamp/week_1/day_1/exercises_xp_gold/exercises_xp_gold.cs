@@ -5,7 +5,7 @@ string input = Console.ReadLine();
 if (int.TryParse(input, out int number))
 {
    
-    if (number % 15 == 0)
+    if (number % 5== 0 && number % 3 == 0)
     {
         Console.WriteLine("FizzBuzz");
     }
@@ -24,15 +24,3 @@ if (int.TryParse(input, out int number))
 }
 
 // --- Exercice2 FizzBuzz ---
-
-int height = 5;
-
-for (int table = 1; table<= height; table++)
-{
-    string stars = "";
-    for (int star = 1; star <= table; star++)
-    {
-        stars += "*";
-    }
-    Console.WriteLine(stars);
-}
