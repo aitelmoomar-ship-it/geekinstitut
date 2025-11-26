@@ -25,8 +25,6 @@ if (int.TryParse(input, out int number))
 
 // --- Exercice2 FizzBuzz ---
 
-// --- Exercice Triangle ---
-
 int height = 5;
 
 for (int table = 1; table<= height; table++)
