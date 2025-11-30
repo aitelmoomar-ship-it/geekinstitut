@@ -349,28 +349,164 @@
 // }
 
 // //exericexp 10:
-class Dog
+// class Dog
+// {
+//         public string Name;
+//         public int Height;
+
+//         public Dog(string name, int height)
+//         {
+//             this.Name = name;
+//             this.Height = height;
+//         }
+
+//         public void Bark()
+//         {
+//             Console.WriteLine($"{this.Name} goes woof!");
+//         }
+
+//         public void Jump()
+//         {
+//             int jumpHeight = this.Height * 2;
+//             Console.WriteLine($"{this.Name} jumps {jumpHeight} cm high!");
+//         }
+// }
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         Dog davidsDog = new Dog("Rex", 50);
+//         Console.WriteLine($"Dog: {davidsDog.Name},Height: {davidsDog.Height}");
+//         davidsDog.Bark();
+//         davidsDog.Jump();
+
+//         Dog sarahsDog = new Dog("Teacup", 20);
+//         Console.WriteLine($"Dog: {sarahsDog.Name}, Height: {sarahsDog.Height}");
+//         sarahsDog.Bark();
+//         sarahsDog.Jump();
+
+//         if (davidsDog.Height > sarahsDog.Height)
+//         {
+//             Console.WriteLine($"{davidsDog.Name} is taller.");
+//         }
+//         else
+//         {
+//             Console.WriteLine($"{sarahsDog.Name} is taller.");
+//         }
+//     }
+// }
+
+// //exericexp 11:
+
+// using System.Collections.Generic;
+// class Exercice11_xp
+// {
+
+//     class Song
+//     {
+//         public List<string> Lyrics;
+
+//         public Song(List<string> lyrics)
+//         {
+//             this.Lyrics = lyrics;
+//         }
+
+//         public void SingMeASong()
+//         {
+//             foreach (string line in this.Lyrics)
+//             {
+//                 Console.WriteLine(line);
+//             }
+//         }
+//     }
+
+//     class Program
+//     {
+//         static void Main()
+//         {
+//             var stairway = new Song(new List<string>{
+//                 "There's a lady who's sure",
+//                 "all that glitters is gold",
+//                 "and she's buying a stairway to heaven"
+//             });
+
+//             stairway.SingMeASong();
+//         }
+//     }
+// }
+// //exericexp 12:
+
+using System;
+using System.Collections.Generic;
+class Zoo
 {
-    public string Name;
-    public int Height;
+    public List<string> animals;
+    public string name;
 
-    // Constructor
-    public Dog(string name, int height)
+    public Zoo(string zooName)
     {
-        this.Name = name;
-        this.Height = height;
+        this.name = zooName;
     }
 
-    public void Bark()
+    public void AddAnimal(string newAnimal)
     {
-        Console.WriteLine($"{this.Name} goes woof!");
+        if (!animals.Contains(newAnimal))
+        {
+            animals.Add(newAnimal);
+            Console.WriteLine($"{newAnimal} added.");
+        }
     }
 
-    // Instance Method: Jump
-    public void Jump()
+    public void GetAnimals()
     {
-        int jumpHeight = this.Height * 2;
-        Console.WriteLine($"{this.Name} jumps {jumpHeight} cm high!");
+        Console.WriteLine("Animals in zoo:");
+        foreach (var animal in animals)
+        {
+            Console.Write(animal + " ");
+        }
+        Console.WriteLine();
+    }
+
+    public void SellAnimal(string animalSold)
+    {
+        if (animals.Contains(animalSold))
+        {
+            animals.Remove(animalSold);
+        }
+    }
+
+    public void SortAnimals()
+    {
+
+        Console.WriteLine("Animals sorted and grouped.");
+    }
+
+    public void GetGroups()
+    {
+        Dictionary<char, List<string>> groups = new Dictionary<char, List<string>>();
+
+        foreach (var animal in animals)
+        {
+            char firstLetter = animal[0];
+
+            [cite_start]if (!groups.ContainsKey(firstLetter)) // (Page 4) Check if Key Exists [cite: 1004]
+            {
+                groups[firstLetter] = new List<string>();
+            }
+            groups[firstLetter].Add(animal);
+        }
+
+        foreach (var group in groups)
+        {
+            Console.Write($"{group.Key}: ");
+
+            foreach(var a in group.Value)
+            {
+                Console.Write(a + ", ");
+            }
+            Console.WriteLine();
+        }
     }
 }
 
@@ -378,177 +514,22 @@ class Program
 {
     static void Main()
     {
-        Dog davidsDog = new Dog("Rex", 50);
-        Console.WriteLine($"Dog: {davidsDog.Name},Height: {davidsDog.Height}");
-        davidsDog.Bark();
-        davidsDog.Jump();
+        Zoo newYorkZoo = new Zoo("New York Zoo");
+        
+        newYorkZoo.AddAnimal("Giraffe");
+        newYorkZoo.AddAnimal("Bear");
+        newYorkZoo.AddAnimal("Ape");
+        newYorkZoo.AddAnimal("Cat");
+        newYorkZoo.AddAnimal("Baboon");
 
-        Dog sarahsDog = new Dog("Teacup", 20);
-        Console.WriteLine($"Dog: {sarahsDog.Name}, Height: {sarahsDog.Height}");
-        sarahsDog.Bark();
-        sarahsDog.Jump();
+        newYorkZoo.GetAnimals();
 
-        if (davidsDog.Height > sarahsDog.Height)
-        {
-            Console.WriteLine($"{davidsDog.Name} is taller.");
-        }
-        else
-        {
-            Console.WriteLine($"{sarahsDog.Name} is taller.");
-        }
+        newYorkZoo.SortAnimals();
+        
+        Console.WriteLine("--- Groups ---");
+        newYorkZoo.GetGroups();
+        
+        newYorkZoo.SellAnimal("Bear");
+        newYorkZoo.GetAnimals();
     }
 }
-
-// //exericexp 11:
-
-// using System.Collections.Generic;
-
-// class Song
-// {
-//     public List<string> Lyrics;
-
-//     // Constructor يستقبل قائمة نصوص
-//     public Song(List<string> lyrics)
-//     {
-//         this.Lyrics = lyrics;
-//     }
-
-//     // دالة لطباعة الكلمات
-//     public void SingMeASong()
-//     {
-//         foreach (string line in this.Lyrics)
-//         {
-//             Console.WriteLine(line);
-//         }
-//     }
-// }
-
-// class Program
-// {
-//     static void Main()
-//     {
-//         // إنشاء الكائن مع تمرير القائمة مباشرة
-//         var stairway = new Song(new List<string>{
-//             "There's a lady who's sure",
-//             "all that glitters is gold",
-//             "and she's buying a stairway to heaven"
-//         });
-
-//         stairway.SingMeASong();
-//     }
-// }
-
-// //exericexp 12:
-
-// using System;
-// using System.Collections.Generic;
-// using System.Linq; // لاستخدام Sort إذا لزم الأمر، أو يمكن الفرز يدوياً
-
-// class Zoo
-// {
-//     public List<string> animals;
-//     public string name;
-
-//     // 1. Constructor
-//     public Zoo(string zooName)
-//     {
-//         this.name = zooName;
-//         this.animals = new List<string>(); // تهيئة القائمة فارغة
-//     }
-
-//     // 2. AddAnimal
-//     public void AddAnimal(string newAnimal)
-//     {
-//         if (!animals.Contains(newAnimal))
-//         {
-//             animals.Add(newAnimal);
-//             Console.WriteLine($"{newAnimal} added.");
-//         }
-//     }
-
-//     // 3. GetAnimals
-//     public void GetAnimals()
-//     {
-//         Console.WriteLine("Animals in zoo:");
-//         foreach (var animal in animals)
-//         {
-//             Console.Write(animal + " ");
-//         }
-//         Console.WriteLine();
-//     }
-
-//     // 4. SellAnimal
-//     public void SellAnimal(string animalSold)
-//     {
-//         if (animals.Contains(animalSold))
-//         {
-//             animals.Remove(animalSold);
-//             Console.WriteLine($"{animalSold} sold."); // وداعاً!
-//         }
-//     }
-
-//     // 5. SortAnimals (فرز + تجميع)
-//     // الدرس صفحة 1 يشرح القواميس، وصفحة 5 تشرح الحلقات. سأستخدمهما للتجميع.
-//     public void SortAnimals()
-//     {
-//         animals.Sort(); // ترتيب أبجدي
-
-//         Console.WriteLine("Animals sorted and grouped.");
-//     }
-
-//     // 6. GetGroups: طباعة الحيوانات مجمعة حسب الحرف الأول
-//     // سنستخدم منطق القواميس (Page 1) والحلقات (Page 5) لإنشاء المجموعات
-//     public void GetGroups()
-//     {
-//         // قاموس: المفتاح هو الحرف الأول، القيمة هي قائمة الحيوانات
-//         Dictionary<char, List<string>> groups = new Dictionary<char, List<string>>();
-
-//         foreach (var animal in animals)
-//         {
-//             char firstLetter = animal[0];
-
-//             [cite_start]if (!groups.ContainsKey(firstLetter)) // (Page 4) Check if Key Exists [cite: 1004]
-//             {
-//                 groups[firstLetter] = new List<string>();
-//             }
-//             groups[firstLetter].Add(animal);
-//         }
-
-//         // طباعة المجموعات
-//         foreach (var group in groups)
-//         {
-//             Console.Write($"{group.Key}: ");
-//             [cite_start]// طباعة القائمة داخل القاموس (Page 2) Nested Dictionary/List [cite: 959]
-//             foreach(var a in group.Value)
-//             {
-//                 Console.Write(a + ", ");
-//             }
-//             Console.WriteLine();
-//         }
-//     }
-// }
-
-// class Program
-// {
-//     static void Main()
-//     {
-//         Zoo newYorkZoo = new Zoo("New York Zoo");
-        
-//         // إضافة حيوانات مختلفة لاختبار التجميع
-//         newYorkZoo.AddAnimal("Giraffe");
-//         newYorkZoo.AddAnimal("Bear");
-//         newYorkZoo.AddAnimal("Ape");
-//         newYorkZoo.AddAnimal("Cat");
-//         newYorkZoo.AddAnimal("Baboon");
-
-//         newYorkZoo.GetAnimals();
-
-//         newYorkZoo.SortAnimals();
-        
-//         Console.WriteLine("--- Groups ---");
-//         newYorkZoo.GetGroups();
-        
-//         newYorkZoo.SellAnimal("Bear");
-//         newYorkZoo.GetAnimals();
-//     }
-// }
