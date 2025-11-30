@@ -437,99 +437,99 @@
 // }
 // //exericexp 12:
 
-using System;
-using System.Collections.Generic;
-class Zoo
-{
-    public List<string> animals;
-    public string name;
+// using System;
+// using System.Collections.Generic;
+// class Zoo
+// {
+//     public List<string> animals;
+//     public string name;
 
-    public Zoo(string zooName)
-    {
-        this.name = zooName;
-    }
+//     public Zoo(string zooName)
+//     {
+//         this.name = zooName;
+//     }
 
-    public void AddAnimal(string newAnimal)
-    {
-        if (!animals.Contains(newAnimal))
-        {
-            animals.Add(newAnimal);
-            Console.WriteLine($"{newAnimal} added.");
-        }
-    }
+//     public void AddAnimal(string newAnimal)
+//     {
+//         if (!animals.Contains(newAnimal))
+//         {
+//             animals.Add(newAnimal);
+//             Console.WriteLine($"{newAnimal} added.");
+//         }
+//     }
 
-    public void GetAnimals()
-    {
-        Console.WriteLine("Animals in zoo:");
-        foreach (var animal in animals)
-        {
-            Console.Write(animal + " ");
-        }
-        Console.WriteLine();
-    }
+//     public void GetAnimals()
+//     {
+//         Console.WriteLine("Animals in zoo:");
+//         foreach (var animal in animals)
+//         {
+//             Console.Write(animal + " ");
+//         }
+//         Console.WriteLine();
+//     }
 
-    public void SellAnimal(string animalSold)
-    {
-        if (animals.Contains(animalSold))
-        {
-            animals.Remove(animalSold);
-        }
-    }
+//     public void SellAnimal(string animalSold)
+//     {
+//         if (animals.Contains(animalSold))
+//         {
+//             animals.Remove(animalSold);
+//         }
+//     }
 
-    public void SortAnimals()
-    {
+//     public void SortAnimals()
+//     {
 
-        Console.WriteLine("Animals sorted and grouped.");
-    }
+//         Console.WriteLine("Animals sorted and grouped.");
+//     }
 
-    public void GetGroups()
-    {
-        Dictionary<char, List<string>> groups = new Dictionary<char, List<string>>();
+//     public void GetGroups()
+//     {
+//         Dictionary<char, List<string>> groups = new Dictionary<char, List<string>>();
 
-        foreach (var animal in animals)
-        {
-            char firstLetter = animal[0];
+//         foreach (var animal in animals)
+//         {
+//             char firstLetter = animal[0];
 
-            [cite_start]if (!groups.ContainsKey(firstLetter)) // (Page 4) Check if Key Exists [cite: 1004]
-            {
-                groups[firstLetter] = new List<string>();
-            }
-            groups[firstLetter].Add(animal);
-        }
+//             [cite_start]if (!groups.ContainsKey(firstLetter)) // (Page 4) Check if Key Exists [cite: 1004]
+//             {
+//                 groups[firstLetter] = new List<string>();
+//             }
+//             groups[firstLetter].Add(animal);
+//         }
 
-        foreach (var group in groups)
-        {
-            Console.Write($"{group.Key}: ");
+//         foreach (var group in groups)
+//         {
+//             Console.Write($"{group.Key}: ");
 
-            foreach(var a in group.Value)
-            {
-                Console.Write(a + ", ");
-            }
-            Console.WriteLine();
-        }
-    }
-}
+//             foreach(var a in group.Value)
+//             {
+//                 Console.Write(a + ", ");
+//             }
+//             Console.WriteLine();
+//         }
+//     }
+// }
 
-class Program
-{
-    static void Main()
-    {
-        Zoo newYorkZoo = new Zoo("New York Zoo");
+// class Program
+// {
+//     static void Main()
+//     {
+//         Zoo newYorkZoo = new Zoo("New York Zoo");
         
-        newYorkZoo.AddAnimal("Giraffe");
-        newYorkZoo.AddAnimal("Bear");
-        newYorkZoo.AddAnimal("Ape");
-        newYorkZoo.AddAnimal("Cat");
-        newYorkZoo.AddAnimal("Baboon");
+//         newYorkZoo.AddAnimal("Giraffe");
+//         newYorkZoo.AddAnimal("Bear");
+//         newYorkZoo.AddAnimal("Ape");
+//         newYorkZoo.AddAnimal("Cat");
+//         newYorkZoo.AddAnimal("Baboon");
 
-        newYorkZoo.GetAnimals();
+//         newYorkZoo.GetAnimals();
 
-        newYorkZoo.SortAnimals();
+//         newYorkZoo.SortAnimals();
         
-        Console.WriteLine("--- Groups ---");
-        newYorkZoo.GetGroups();
+//         Console.WriteLine("--- Groups ---");
+//         newYorkZoo.GetGroups();
         
-        newYorkZoo.SellAnimal("Bear");
-        newYorkZoo.GetAnimals();
-    }
-}
+//         newYorkZoo.SellAnimal("Bear");
+//         newYorkZoo.GetAnimals();
+//     }
+// }
