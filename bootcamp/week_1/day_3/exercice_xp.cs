@@ -1,23 +1,23 @@
 // exerice 1:
-class exericexp
-{
-    static void Main()
-    {
-        List<string> keys = new List<string> { "Ten", "Twenty", "Thirty" };
-        List<int> values = new List<int> { 10, 20, 30 };
-        Dictionary<string, int> myDict = new Dictionary<string, int>();
+// class exericexp
+// {
+//     static void Main()
+//     {
+//         List<string> keys = new List<string> { "Ten", "Twenty", "Thirty" };
+//         List<int> values = new List<int> { 10, 20, 30 };
+//         Dictionary<string, int> myDict = new Dictionary<string, int>();
 
-        for (int i = 0; i < keys.Count; i++)
-        {
-            myDict[keys[i]] = values[i];
-        }
+//         for (int i = 0; i < keys.Count; i++)
+//         {
+//             myDict[keys[i]] = values[i];
+//         }
 
-        foreach (var kvp in myDict) // 
-        {
-            Console.WriteLine(kvp.Key + ": " + kvp.Value);
-        }
-    }
-}
+//         foreach (var kvp in myDict) // 
+//         {
+//             Console.WriteLine(kvp.Key + ": " + kvp.Value);
+//         }
+//     }
+// }
 // //exerice 2:
 // // class exericexp2
 // // {
@@ -349,59 +349,55 @@ class exericexp
 // }
 
 // //exericexp 10:
-// class Dog
-// {
-//     public string Name;
-//     public int Height;
+class Dog
+{
+    public string Name;
+    public int Height;
 
-//     // Constructor
-//     public Dog(string name, int height)
-//     {
-//         this.Name = name;
-//         this.Height = height;
-//     }
+    // Constructor
+    public Dog(string name, int height)
+    {
+        this.Name = name;
+        this.Height = height;
+    }
 
-//     [cite_start]// Instance Method: Bark (Page 20) [cite: 1289-1292]
-//     public void Bark()
-//     {
-//         Console.WriteLine($"{this.Name} goes woof!");
-//     }
+    public void Bark()
+    {
+        Console.WriteLine($"{this.Name} goes woof!");
+    }
 
-//     // Instance Method: Jump
-//     public void Jump()
-//     {
-//         int jumpHeight = this.Height * 2;
-//         Console.WriteLine($"{this.Name} jumps {jumpHeight} cm high!");
-//     }
-// }
+    // Instance Method: Jump
+    public void Jump()
+    {
+        int jumpHeight = this.Height * 2;
+        Console.WriteLine($"{this.Name} jumps {jumpHeight} cm high!");
+    }
+}
 
-// class Program
-// {
-//     static void Main()
-//     {
-//         [cite_start]// إنشاء الكائن الأول واستدعاء الدوال (Page 21) [cite: 1293]
-//         Dog davidsDog = new Dog("Rex", 50);
-//         Console.WriteLine($"Dog: {davidsDog.Name}, Height: {davidsDog.Height}");
-//         davidsDog.Bark();
-//         davidsDog.Jump();
+class Program
+{
+    static void Main()
+    {
+        Dog davidsDog = new Dog("Rex", 50);
+        Console.WriteLine($"Dog: {davidsDog.Name},Height: {davidsDog.Height}");
+        davidsDog.Bark();
+        davidsDog.Jump();
 
-//         // إنشاء الكائن الثاني
-//         Dog sarahsDog = new Dog("Teacup", 20);
-//         Console.WriteLine($"Dog: {sarahsDog.Name}, Height: {sarahsDog.Height}");
-//         sarahsDog.Bark();
-//         sarahsDog.Jump();
+        Dog sarahsDog = new Dog("Teacup", 20);
+        Console.WriteLine($"Dog: {sarahsDog.Name}, Height: {sarahsDog.Height}");
+        sarahsDog.Bark();
+        sarahsDog.Jump();
 
-//         // مقارنة الحجم
-//         if (davidsDog.Height > sarahsDog.Height)
-//         {
-//             Console.WriteLine($"{davidsDog.Name} is taller.");
-//         }
-//         else
-//         {
-//             Console.WriteLine($"{sarahsDog.Name} is taller.");
-//         }
-//     }
-// }
+        if (davidsDog.Height > sarahsDog.Height)
+        {
+            Console.WriteLine($"{davidsDog.Name} is taller.");
+        }
+        else
+        {
+            Console.WriteLine($"{sarahsDog.Name} is taller.");
+        }
+    }
+}
 
 // //exericexp 11:
 
