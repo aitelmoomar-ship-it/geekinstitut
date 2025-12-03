@@ -141,3 +141,43 @@ public class User
         Console.WriteLine("--- End of Feed ---\n");
     }
 }
+
+class Program
+{
+    static void Main()
+    {
+        User alice = new User("Alice", 25);
+        User bob = new User("Bob", 30);
+        User charlie = new User("Charlie", 28);
+
+        alice.AddFriend(bob);
+        alice.AddFriend(charlie);
+        bob.AddFriend(charlie);
+
+        alice.CreatePost("Just finished a great book!");
+        bob.CreatePost("Beautiful weather today!");
+        charlie.CreatePost("Working on a new project!");
+
+        Post alicePost = alice.Posts[0];
+        Comment comment1 = new Comment(bob, "Sounds interesting!");
+        alicePost.AddComment(comment1);
+
+        Post bobPost = bob.Posts[0];
+        Comment comment2 = new Comment(charlie, "Sure is!");
+        bobPost.AddComment(comment2);
+
+        alicePost.AddLike(bob);
+        alicePost.AddLike(charlie);
+        bobPost.AddLike(alice);
+
+        comment1.AddLike(alice);
+        comment2.AddLike(alice);
+
+        alice.ShowFeed();
+        bob.ShowFeed();
+        charlie.ShowFeed();
+
+        Console.WriteLine("\nPress any key to exit...");
+        Console.ReadKey();
+    }
+}
