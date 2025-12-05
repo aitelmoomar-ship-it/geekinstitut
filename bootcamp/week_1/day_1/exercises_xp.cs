@@ -1,12 +1,11 @@
 //                     //Exercise 1: Goal: Understand basic output syntax.
 
-// Console.WriteLine("Exercise 1: Goal: Understand basic output syntax.");
 // Console.WriteLine("Welcome to C# Programming!");
 
 //                     //Exercise 2: Goal: Understand variables and string concatenation.
-// string name="Omar"; int age = 22;
-// Console.WriteLine("my name is "+name+" and I am "+age+" years old");
-
+// string name = "Sam";
+// int age = 25;       
+// Console.WriteLine("My name is " + name + " and I am " + age + " years old.");
 //                     //Exercise 3:  Goal: Basic arithmetic operators.
 // int num1=25;
 // int num2=20;
@@ -63,30 +62,30 @@
 // Console.WriteLine("this Fahrenheit is : " +F);
 // }
 
-//                     //Exercise 9: Goal: Variable manipulation.
-// int a=10;
-// int b=6;
-// a=a+=5;
-// b=b-=2;
-// {
-//     Console.WriteLine("a:"+a);
-//     Console.WriteLine("b:"+b);
-// }
+                    //Exercise 9: Goal: Variable manipulation.
+// int a = 10;
+// int b = 6;
 
-// int a=10;
-// int b=6;
+// a += 5; 
+// b -= 2; 
+
+// Console.WriteLine("a:" + a);
+// Console.WriteLine("b:" + b);
+
+
+// int x = 10; 
+// int y = 6;
 // int swap;
-// {
-//     Console.WriteLine("Before swapping: a="+a+" and "+"b="+b);
-// }
-// swap=a;
-// a=b;
-// b=swap;
-// {
-//     Console.WriteLine("After swapping: a="+a+" and "+"b="+b);
-// }
 
-//                     //Exercise 10:Goal: Loops + user input.
+// Console.WriteLine("Before swapping: x=" + x + " and " + "y=" + y);
+
+// swap = x;
+// x = y;
+// y = swap;
+
+// Console.WriteLine("After swapping: x=" + x + " and " + "y=" + y);
+
+                    //Exercise 10:Goal: Loops + user input.
 
 // Console.Write("Enter a number to multiply: ");
 // string input = Console.ReadLine();
