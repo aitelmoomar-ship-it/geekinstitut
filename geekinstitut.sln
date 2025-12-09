@@ -1,0 +1,42 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bootcamp", "bootcamp", "{E05FD026-500D-28B8-9EF5-407098F79744}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "week_1", "week_1", "{6D8E23A2-1367-82BF-64EA-D10E7D2D8A72}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "day_5", "day_5", "{72A810FD-86FE-F5FF-216D-963A94DD3218}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "projects01", "bootcamp\week_1\day_5\projects01\projects01.csproj", "{E73C8BB6-7CD8-17BF-BD92-A3B52B04D1E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "projects02", "bootcamp\week_1\day_5\projects02\projects02.csproj", "{9F19F7F3-39DE-8C14-EEA1-C0FF45BE5F95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E73C8BB6-7CD8-17BF-BD92-A3B52B04D1E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E73C8BB6-7CD8-17BF-BD92-A3B52B04D1E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E73C8BB6-7CD8-17BF-BD92-A3B52B04D1E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E73C8BB6-7CD8-17BF-BD92-A3B52B04D1E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F19F7F3-39DE-8C14-EEA1-C0FF45BE5F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F19F7F3-39DE-8C14-EEA1-C0FF45BE5F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F19F7F3-39DE-8C14-EEA1-C0FF45BE5F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F19F7F3-39DE-8C14-EEA1-C0FF45BE5F95}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6D8E23A2-1367-82BF-64EA-D10E7D2D8A72} = {E05FD026-500D-28B8-9EF5-407098F79744}
+		{72A810FD-86FE-F5FF-216D-963A94DD3218} = {6D8E23A2-1367-82BF-64EA-D10E7D2D8A72}
+		{E73C8BB6-7CD8-17BF-BD92-A3B52B04D1E6} = {72A810FD-86FE-F5FF-216D-963A94DD3218}
+		{9F19F7F3-39DE-8C14-EEA1-C0FF45BE5F95} = {72A810FD-86FE-F5FF-216D-963A94DD3218}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CC62885-E862-4EC8-9040-C847CF720A13}
+	EndGlobalSection
+EndGlobal
